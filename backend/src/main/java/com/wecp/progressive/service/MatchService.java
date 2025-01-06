@@ -18,7 +18,7 @@ public interface MatchService {
     void deleteMatch(int matchId) throws SQLException;
 
     //Do not implement these methods in MatchServiceImplJdbc.java class
-    default List<Match> getAllMatchesByStatus(String status) {
+    default List<Match> getAllMatchesByStatus(String status)  throws SQLException {
         return null;
     }
 }

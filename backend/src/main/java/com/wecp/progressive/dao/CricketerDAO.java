@@ -2,7 +2,6 @@ package com.wecp.progressive.dao;
 
 import com.wecp.progressive.entity.Cricketer;
 
-import java.sql.SQLClientInfoException;
 import java.sql.SQLException;
 import java.util.List;
 

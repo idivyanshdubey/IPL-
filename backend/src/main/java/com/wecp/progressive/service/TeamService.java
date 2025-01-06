@@ -23,6 +23,6 @@ public interface TeamService {
 
     default void updateTeam(Team team) throws SQLException {}
 
-    default void deleteTeam(int teamId) throws SQLException{}
+    default void deleteTeam(int teamId) throws SQLException {}
 
 }

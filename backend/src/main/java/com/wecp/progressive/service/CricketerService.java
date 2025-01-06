@@ -13,11 +13,11 @@ public interface CricketerService {
 
     List<Cricketer> getAllCricketersSortedByExperience() throws SQLException;
 
-    default void emptyArrayList() throws SQLException{
+    default void emptyArrayList() {
     }
 
     //Do not implement these methods in CricketerServiceImplArraylist.java class
-    default void updateCricketer(Cricketer cricketer) throws SQLException{}
+    default void updateCricketer(Cricketer cricketer) throws SQLException {}
 
     default void deleteCricketer(int cricketerId) throws SQLException {}
 
@@ -26,7 +26,7 @@ public interface CricketerService {
     }
 
     //Do not implement these methods in CricketerServiceImplArraylist.java and CricketerServiceImplJdbc.java class
-    default List<Cricketer> getCricketersByTeam(int teamId) {
+    default List<Cricketer> getCricketersByTeam(int teamId) throws SQLException {
         return null;
     }
 
