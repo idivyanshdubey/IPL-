@@ -1,4 +1,4 @@
-<div></div>
+<div>
     <form [formGroup]="cricketerForm" (ngSubmit)="onSubmit()">
   
       <div>
@@ -58,5 +58,6 @@
   
     <div *ngIf="errorMessage" class="error">
       <p>{{ errorMessage }}</p>
+    </div>
     </div>
   
