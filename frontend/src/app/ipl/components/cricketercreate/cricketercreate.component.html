@@ -1,0 +1,62 @@
+<div></div>
+    <form [formGroup]="cricketerForm" (ngSubmit)="onSubmit()">
+  
+      <div>
+        <label for="cricketerId">Cricketer ID</label>
+        <input id="cricketerId" formControlName="cricketerId" type="number" placeholder="Enter Cricketer ID">
+       
+      </div>
+  
+      <div>
+        <label for="teamId">Team ID</label>
+        <input id="teamId" formControlName="teamId" type="number" placeholder="Enter Team ID">
+       
+      </div>
+  
+      <div>
+        <label for="cricketerName">Cricketer Name</label>
+        <input id="cricketerName" formControlName="cricketerName" placeholder="Enter Cricketer Name" type="text">
+       
+      </div>
+  
+      <div>
+        <label for="age">Age</label>
+        <input id="age" formControlName="age" placeholder="Enter Age" type="number">
+      </div>
+  
+      <div>
+        <label for="nationality">Nationality</label>
+        <input type="text" id="nationality" formControlName="nationality" placeholder = "Enter the Nationality">
+      </div>
+  
+      <div>
+        <label for="experience">Experience</label>
+        <input type="number" name="experience" id="experience" formControlName ="experience" placeholder="Enter the experience">
+      </div>
+  
+      <div>
+        <label for="role">Role</label>
+        <input type="text" name="role" id="role" formControlName="role" placeholder=" Enter the Role">
+      </div>
+  
+      <div>
+        <label for="totalRuns">Total Runs</label>
+        <input id="totalRuns" formControlName="totalRuns" placeholder="Enter Total Runs" type="number">
+      </div>
+  
+      <div>
+        <label for="totalWickets">Total Wickets</label>
+        <input type="number" formControlName="totalWickets" id="totalWickets" placeholder="Enter Total Wickets">
+      </div>
+      <button type="submit">Create Cricketer</button>
+      <button type="button" (click)="resetForm()">Reset Form</button>
+    </form>
+  
+    <div *ngIf="successMessage" class="success">
+      <p>{{ successMessage }}</p>
+    </div>
+  
+    <div *ngIf="errorMessage" class="error">
+      <p>{{ errorMessage }}</p>
+    </div>
+  

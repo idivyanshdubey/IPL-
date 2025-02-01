@@ -4,9 +4,16 @@ import { CommonModule } from "@angular/common";
 import { AuthRoutingModule } from "./auth-routing.module";
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { RegistrationComponent } from "./components/registration/registration.component";
+import { LoginComponent } from "./components/login/login.component";
+import { TeamCreateComponent } from "../ipl/components/teamcreate/teamcreate.component";
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    RegistrationComponent,
+    LoginComponent,
+
+  ],
   imports: [
     CommonModule,
     AuthRoutingModule,
