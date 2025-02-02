@@ -6,12 +6,13 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { RegistrationComponent } from "./components/registration/registration.component";
 import { LoginComponent } from "./components/login/login.component";
-import { TeamCreateComponent } from "../ipl/components/teamcreate/teamcreate.component";
+import { LogoutComponent } from "./components/logout/logout.component";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
-  declarations: [
-    RegistrationComponent,
+  declarations: [RegistrationComponent,
     LoginComponent,
+    LogoutComponent
 
   ],
   imports: [
@@ -19,9 +20,10 @@ import { TeamCreateComponent } from "../ipl/components/teamcreate/teamcreate.com
     AuthRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    RouterModule
   ],
   exports: [
-    
+    LogoutComponent
   ]
 })
 export class AuthModule {}
