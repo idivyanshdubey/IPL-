@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Vote } from '../../types/Vote';
@@ -41,4 +42,10 @@ export class VoteComponent implements OnInit {
   resetForm(): void {
     this.voteForm.reset();
   }
+}
+
+export class VoteComponent  {
+  
+  
+
 }
