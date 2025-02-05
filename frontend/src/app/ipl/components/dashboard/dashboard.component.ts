@@ -41,7 +41,5 @@ export class DashboardComponent implements OnInit {
         });
     }
 
-export class DashboardComponent  {
-
 
 }
