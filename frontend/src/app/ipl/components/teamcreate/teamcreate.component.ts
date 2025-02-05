@@ -4,15 +4,13 @@ import { Team } from "../../types/Team";
 import { IplService } from "../../services/ipl.service";
 import { HttpErrorResponse } from "@angular/common/http";
 
-
 @Component({
   selector: 'app-teamcreate',
   templateUrl: './teamcreate.component.html',
   styleUrls: ['./teamcreate.component.scss'] 
 })
-
-
 export class TeamCreateComponent implements OnInit {
+
 
   teamForm !: FormGroup;
   successMessage: string | null = null;
@@ -29,37 +27,15 @@ export class TeamCreateComponent implements OnInit {
       location: ['', Validators.required],
       ownerName: ['', [Validators.required, Validators.minLength(2)]],
       establishmentYear: [null, [Validators.required, Validators.min(1900) , Validators.max(this.currentYear)]]
-
-export class TeamCreateComponent implements OnInit {
-
-
-  teamForm: FormGroup;
-  successMessage: string | null = null;
-  errorMessage: string | null = null;
-
-  constructor(private fb: FormBuilder) {}
-
-  ngOnInit(): void {
-    this.teamForm = this.fb.group({
-      teamId: [null, [Validators.required, Validators.minLength(1)]],
-      teamName: ['', [Validators.required, Validators.minLength(2),Validators.pattern(/^[a-zA-Z0-9]+$/)]],
-      location: ['', Validators.required],
-      ownerName: ['', [Validators.required, Validators.minLength(2)]],
-      establishmentYear: [null, Validators.required]
     });
   }
 
   onSubmit(): void {
     if (this.teamForm.valid) {
-
       // this.successMessage = 'Team created successfull!';
       // this.errorMessage = null;
       // console.log('Team Created: ', this.teamForm.value);
       this.addTeam();
-      this.successMessage = 'Team has been successfully created!';
-      this.errorMessage = null;
-      console.log('Team Created: ', this.teamForm.value);
-
     } else {
       this.errorMessage = 'Please fill out all required fields correctly.';
       this.successMessage = null;
@@ -86,7 +62,6 @@ export class TeamCreateComponent implements OnInit {
       teamName: '',
       location: '',
       ownerName: '',
-
       establishmentYear: this.currentYear
     });
   }
@@ -102,14 +77,7 @@ export class TeamCreateComponent implements OnInit {
       }
     }
     this.successMessage = null;
-    
     console.error('An error occurred:' , this.errorMessage);
 
   }
 }
-
-      establishmentYear: new Date().getFullYear()
-    });
-  }
-}
-
