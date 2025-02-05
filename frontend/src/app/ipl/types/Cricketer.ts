@@ -39,7 +39,3 @@ export class Cricketer {
         console.log(`Cricketer Name: ${this.cricketerName}`);
     }
 }
-
-
-
-
