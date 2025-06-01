@@ -1,15 +1,18 @@
 # IPL- 🏏
 
-Welcome to IPL-! This project is your gateway to exploring, analyzing, and visualizing Indian Premier League (IPL) cricket data. Whether you’re a cricket fan, data analyst, researcher, or developer, IPL- provides interactive tools and resources to make IPL statistics meaningful and fun.
+Welcome to **IPL-**, an interactive platform for exploring, analyzing, and visualizing Indian Premier League (IPL) cricket data. This project is designed as a modern, modular web application:
+
+- **Frontend:** Angular
+- **Backend:** Spring Boot (Java)
+- **Database:** MySQL
 
 ---
 
 ## ✨ Key Features
 
-- **Interactive Data Analysis:** Dive into IPL matches, teams, players, and seasons with intuitive queries.
-- **Rich Visualizations:** Instantly generate graphs for runs, wickets, player stats, win/loss ratios, and more.
-- **Extensible & Modular:** Easily add new datasets or extend analysis capabilities.
-- **Custom Scripts & Notebooks:** Ready-to-use scripts for deep dives and custom analyses.
+- **Interactive Data Exploration:** Browse IPL matches, teams, players, and seasons with ease.
+- **Powerful Visualizations:** Analyze runs, wickets, player stats, win/loss ratios, and more through dynamic charts and graphs.
+- **Extensible & Modular Design:** Effortlessly add new datasets or extend analytical capabilities as your needs grow.
 
 ---
 
@@ -22,83 +25,84 @@ git clone https://github.com/idivyanshdubey/IPL-.git
 cd IPL-
 ```
 
-### 2. Install Dependencies
+### 2. Set Up the Backend
 
-Ensure you have Python 3.x installed.
+1. **Install Java & Maven:**  
+   Ensure you have Java 17+ and Maven installed.
+2. **Configure MySQL:**  
+   - Create a new MySQL database (e.g., `ipl_db`).
+   - Update your database credentials in `src/main/resources/application.properties`.
+3. **Run the Spring Boot Server:**  
+   ```bash
+   mvn spring-boot:run
+   ```
 
-```bash
-pip install -r requirements.txt
-```
+### 3. Set Up the Frontend
 
-### 3. (Optional) Create a Virtual Environment
+1. **Install Node.js & npm:**  
+   Make sure you have Node.js (v16+) and npm installed.
+2. **Navigate to the Frontend Directory:**  
+   ```bash
+   cd frontend
+   ```
+3. **Install Dependencies:**  
+   ```bash
+   npm install
+   ```
+4. **Run the Angular App:**  
+   ```bash
+   ng serve
+   ```
+   The app will be available at [http://localhost:4200](http://localhost:4200).
 
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+---
+
+## 🗃️ Project Structure
+
+```text
+IPL-/
+│
+├── backend/            # Spring Boot backend (Java)
+│   └── src/
+│       └── ...
+├── frontend/           # Angular frontend (TypeScript)
+│   └── src/
+│       └── ...
+├── database/           # MySQL schema and seed data
+├── README.md
+└── ...
 ```
 
 ---
 
-## 🏃 Usage
+## 📊 Example Visualizations
 
-1. **Launch the Main Script**
-
-   ```bash
-   python main.py
-   ```
-
-2. **Explore the Interface**
-
-   - Use the prompts or menu to filter by team, player, season, or match.
-   - Access built-in plots and statistics.
-   - Save or export your analysis as needed.
-
-3. **Customize Your Exploration**
-
-   - Add new CSVs to the `data/` folder for more seasons or leagues.
-   - Modify or add scripts in `scripts/` or notebooks in `notebooks/` for advanced analysis.
-   - Integrate with Streamlit, Dash, or Flask for web-based visualizations.
+- **Top Run Scorers by Season**
+- **Best Bowling Figures**
+- **Team Win/Loss Trends**
+- **Player Performance Over Time**
 
 ---
 
 ## 🤝 Contributing
 
-We’d love your help to make IPL- even better! To contribute:
-
-1. Fork the repo.
-2. Create a new branch:
-   ```bash
-   git checkout -b my-feature
-   ```
-3. Make your changes and commit:
-   ```bash
-   git commit -m "Describe your changes"
-   ```
-4. Push to your branch:
-   ```bash
-   git push origin my-feature
-   ```
-5. Open a Pull Request with a description of your changes.
+Contributions are welcome! Please open an issue or submit a pull request for new features, bug fixes, or improvements.
 
 ---
 
-## ❓ FAQ
-
-**Q:** What data sources can I use?  
-**A:** IPL- works with IPL match data in CSV format. You can add other cricket datasets with minor tweaks.
-
-**Q:** Can I adapt this for other cricket leagues?  
-**A:** Yes! Update the data loader and analysis scripts for compatibility.
-
-**Q:** Where do I get help or ask questions?  
-**A:** Open an [issue](https://github.com/idivyanshdubey/IPL-/issues) or reach out to [@idivyanshdubey](https://github.com/idivyanshdubey).
-
----
-
-## 📜 License
+## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Enjoy exploring IPL like never before! 🏏📊
+## 🙌 Acknowledgements
+
+- [IPL Official Data](https://www.iplt20.com/stats/all-time)
+- [Angular](https://angular.io/)
+- [Spring Boot](https://spring.io/projects/spring-boot)
+- [MySQL](https://www.mysql.com/)
+
+---
+
+**Enjoy exploring the IPL like never before! 🏆**
